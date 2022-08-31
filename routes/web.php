@@ -21,3 +21,5 @@ Route::get('/',[DashboardController::class,'view_Dashboard'])->name('dashboard')
 //catogory manage
 Route::get('category/list',[CategoryController::class,'category_list'])->name('category.list');
 Route::get('category/create',[CategoryController::class,'category_create'])->name('category.create');
+Route::post('category/store',[CategoryController::class,'category_store'])->name('category.store');
+ 
