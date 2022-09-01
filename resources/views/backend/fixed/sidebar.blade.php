@@ -10,7 +10,7 @@
                 <div class="sb-sidenav-menu-heading">Interface</div>
 
                 <a class="nav-link" href="{{route('category.list')}}">Categories</a>
-                <!-- <a class="nav-link" href="#">Products</a> -->
+                <a class="nav-link" href="{{route('subcategory.list')}}">Sub Categories</a>
                 
                  
 
