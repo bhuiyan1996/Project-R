@@ -3,7 +3,7 @@
 <h1>jjjkghkmjl</h1>
 
 
-<form action="{{route('subcategory.store')}}" method="POST" enctype="multipart/form-data" >
+<form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data" >
     @csrf
 
     <h6>Category Name</h6>
@@ -14,17 +14,26 @@
     @endforeach
     </select>
 
+    <h6>Sub Category Name</h6>
+    <select name="subcategory_id" id="text">
+    <option selected>Category Name </option>
+    @foreach($subcategories as $data)
+    <option value="{{$data->id}}">{{$data->name}}</option>
+    @endforeach
+    </select>
+
+    
     <!-- <div class="form-group">
     <label for="text"></label>
     <input type="text" class="form-control" id="text" name='category_name' placeholder="Category Name">
   </div> -->
   <div class="form-group">
-    <label for="text">Sub Category Name</label>
-    <input type="text" class="form-control" id="text" name='subcategory_name' placeholder="subCategory Name">
+    <label for="text">Product Name</label>
+    <input type="text" class="form-control" id="text" name='product_name' placeholder="product Name">
   </div>
   <div class="form-group">
-    <label for="text">Category Dis</label>
-    <input type="text" class="form-control" id="text" name='description' placeholder="subcategory Dis">
+    <label for="text">Product Dis</label>
+    <input type="text" class="form-control" id="text" name='description' placeholder="Product description">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -13,25 +13,27 @@ class SubCategoryController extends Controller
 {
     public function subcategory_list(){
 
-
-        return view ('backend.pages.subcategory.subcategory_list');
+       $Subcategories=SubCategory::with('category')->paginate(10);
+        return view ('backend.pages.subcategory.subcategory_list',compact('Subcategories'));
     }
 
     public function subcategory_create(){
 
         $categories=Category::all();
-        //   dd($categories);
         return view ('backend.pages.subcategory.subcategory_create', compact('categories'));
     }
+
+    
     public function subcategory_store(Request $request){
 
-        $categories=SubCategory::create([
-
-          'name'=>$request->category_name,
+      SubCategory::create([
+          'category_id'=>$request->category_id,
+          // 'name'=>$request->category_name,
           'subname'=>$request->subcategory_name,
-          'description'=>$request->category_dis,
+          'description'=>$request->description,
         ]);
-        return view ('subcategory.list',compact('categories'));
+              //   dd($categories);
+       return redirect()->route('subcategory.list');
       
           }
 }

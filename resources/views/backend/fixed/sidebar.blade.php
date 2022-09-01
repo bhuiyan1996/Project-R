@@ -11,6 +11,7 @@
 
                 <a class="nav-link" href="{{route('category.list')}}">Categories</a>
                 <a class="nav-link" href="{{route('subcategory.list')}}">Sub Categories</a>
+                <a class="nav-link" href="{{route('product.list')}}">Product</a>
                 
                  
 

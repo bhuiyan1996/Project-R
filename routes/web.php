@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
+use App\Http\Controllers\Backend\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ Route::post('category/store',[CategoryController::class,'category_store'])->name
 Route::get('subcategory/list',[SubCategoryController::class,'subcategory_list'])->name('subcategory.list');
 Route::get('subcategory/create',[SubCategoryController::class,'subcategory_create'])->name('subcategory.create');
 Route::post('subcategory/store',[SubCategoryController::class,'subcategory_store'])->name('subcategory.store');
+
+//product manage
+Route::get('product/list',[ProductController::class,'product_list'])->name('product.list');
+Route::get('product/create',[ProductController::class,'product_create'])->name('product.create');
+Route::post('product/store',[ProductController::class,'product_store'])->name('product.store');
