@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('subcategory_id');
-            $table->string('subname');
             $table->string('productname');
+            $table->text('image')->nullable();
             $table->string('description');
             $table->timestamps();
         });

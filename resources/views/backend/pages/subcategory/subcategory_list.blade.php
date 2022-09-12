@@ -10,7 +10,7 @@
 <table class="table">
   <thead>
     <tr>
-      <!-- <th scope="col">SL</th> -->
+      <th scope="col">SL</th>
       <th scope="col">Category Name</th>
       <th scope="col">sub Category Name</th>
       <th scope="col">Category Dis</th>
@@ -20,6 +20,7 @@
   <tbody>
      @foreach($Subcategories as $data)
      <tr>
+     <td>{{$data->id}}</td>
        <!-- <td>$key+1</td> -->
        <td>{{$data->category->name}}</td>
        <td>{{$data->subname}}</td>

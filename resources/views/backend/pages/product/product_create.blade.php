@@ -16,9 +16,9 @@
 
     <h6>Sub Category Name</h6>
     <select name="subcategory_id" id="text">
-    <option selected>Category Name </option>
+    <option selected>Sub Category Name </option>
     @foreach($subcategories as $data)
-    <option value="{{$data->id}}">{{$data->name}}</option>
+    <option value="{{$data->category_id}}">{{$data->subname}}</option>
     @endforeach
     </select>
 
@@ -35,6 +35,12 @@
     <label for="text">Product Dis</label>
     <input type="text" class="form-control" id="text" name='description' placeholder="Product description">
   </div>
+
+  <div class="form-group">
+        <label for="" ><h6>Upload Image</h6></label>
+        <input type="file" name="image" class="form-control" require>
+            </div>
+            
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
