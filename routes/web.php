@@ -1,10 +1,12 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\ProductController;
+
+
+use App\Http\Controllers\Frontend\CusProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,8 @@ use App\Http\Controllers\Backend\ProductController;
 |
 */
 // Route::get('/', function () {return view('master');});
+
+Route::view('/home', 'frontend.layouts.home');
 
 Route::get('/',[DashboardController::class,'view_Dashboard'])->name('dashboard');
 
@@ -36,5 +40,4 @@ Route::get('product/create',[ProductController::class,'product_create'])->name('
 Route::post('product/store',[ProductController::class,'product_store'])->name('product.store');
 
 
-
-Route::view('/home', 'frontend/master');
+Route::get('cusproduct/show',[CusProductController::class,'cusproduct_show'])->name('cusproduct.show');

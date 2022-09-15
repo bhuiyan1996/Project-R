@@ -27,10 +27,15 @@
                                     <li><a href="#">English</a></li>
                                 </ul>
                             </div>
+
+<!-- for login -->
+
                             <div class="header__top__right__auth">
                                 <a href="#"><i class="fa fa-user"></i> Login</a>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
